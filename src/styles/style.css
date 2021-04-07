@@ -1,0 +1,34 @@
+.tire-container{
+    background-color: aqua;
+    height: 500px;
+    width: 500px;
+   
+}
+.tier-row{
+background-color: blueviolet;
+display: grid;
+grid-template-columns: 0.7fr 2.8fr 0.4fr 0.4fr;
+grid-template-rows: 1fr;
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+height: 10vh;
+width: auto;
+}
+.labal{
+    background-color: darkgoldenrod;
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.tier-sort{
+    background-color: red;
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.setting{
+    background-color: chartreuse;
+    grid-area: 1 / 3 / 2 / 4;
+}
+.move-buttons{
+    background-color: darkcyan;
+    grid-area: 1 / 4 / 2 / 5;
+}
