@@ -13,6 +13,7 @@ grid-column-gap: 0px;
 grid-row-gap: 0px;
 height: 10vh;
 width: auto;
+border-style: solid;
 }
 .labal{
     background-color: darkgoldenrod;
@@ -31,4 +32,20 @@ width: auto;
 .move-buttons{
     background-color: darkcyan;
     grid-area: 1 / 4 / 2 / 5;
+}
+
+.tile-holder{
+    display: grid ;
+    background-color: black;
+    height: 25vh;
+    justify-content: flex-start;
+    overflow: auto;
+    
+}
+
+.tile{
+    background-color: green;
+    height:10vh;
+    width: 10vh;
+   
 }

@@ -4,6 +4,7 @@ import Other from './Components/Other/Other'
 import Home from './Components/Home/Home'
 import './styles/style.css'
 
+
 // Save the Component, key and path in an array of objects for each Route
 // You could write all routes by hand but I'm lazy annd this lets me use
 // the map method to just loop over them and make my routes
@@ -29,6 +30,7 @@ const routes = [
 ]
 
 export default function App () {
+
   return (
     <Router>
       <nav>
