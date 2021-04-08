@@ -3,7 +3,7 @@ import SearchAnime from "../SearchAnime/SearchAnime";
 import React, { useState, useEffect } from 'react';
 import SearchHeader from "../SearchResults/SearchHeader"
 function Home() {
-  const [images, setImages] = useState([])
+  const [images, setImages] = useState(null)
   const searchOptions = {
     
     limit: 25,
@@ -17,32 +17,32 @@ function Home() {
 
   const [searchString, setSearchString] = useState('');
   const [lastSearch, setLastSearch] =useState('')
-  useEffect(() => {
-    getImages(searchString);
-  }, []);
+  // useEffect(() => {
+  //   getImages(searchString);
+  // }, []);
   function getImages(searchString) {
-   console.log("It's ME!!!" ,searchString)
+   
     /* Build a URL from the searchOptions object */
     const url = `${searchOptions.api}${searchOptions.endpoint}${searchOptions.type}?q=${searchString}`;
   
     fetch(url)
       .then(response => response.json())
       .then(response => {
-        setImages(response.data);
+        
+        setImages(response.results);
         setLastSearch(searchString);
         setSearchString('')
-        console.log('yo', response, searchString)
       })
       .catch(console.error);
   }
 
   function handleChange(event) {
     setSearchString(event.target.value);
-    console.log('Handle Change');
+    
   }
   
   function handleSubmit(event) {
-    console.log('submit', event)
+   
     event.preventDefault();
     getImages(searchString);
   }
