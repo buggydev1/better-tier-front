@@ -1,10 +1,7 @@
-import TileHolder from "../TileHolders/TileHolder";
-
 const SearchResults = ({ results, tile }) => {
     // return early if there are no images
    
-    if (results === null) {
-        
+    if (results === null) {        
         return <h2>No Images Found!</h2>
       }
     

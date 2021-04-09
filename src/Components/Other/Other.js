@@ -2,15 +2,12 @@ import Layout from '../TierContainer/TierContainer'
 import TileHolder from '../TileHolders/TileHolder'
 import SearchResults from "../SearchResults/SearchResults"
 import SearchAnime from "../SearchAnime/SearchAnime";
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import SearchHeader from "../SearchResults/SearchHeader"
 
 function Other(props) {
   const [images, setImages] = useState(null)
   const searchOptions = {
-    
-    limit: 25,
-    rating: 'G',
     api: 'https://api.jikan.moe/v3',
     endpoint: '/search',
     type: '/character'
@@ -19,9 +16,7 @@ function Other(props) {
   const [ tileData, getTileData] = useState([]); 
   const [searchString, setSearchString] = useState('');
   const [lastSearch, setLastSearch] =useState('')
-  // useEffect(() => {
-  //   getImages(searchString);
-  // }, []);
+
 function tileMaker (tile) {
   getTileData([...tileData, tile])
 }
