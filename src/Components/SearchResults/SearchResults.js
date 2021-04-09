@@ -1,7 +1,10 @@
-const SearchResults = ({ results }) => {
+import TileHolder from "../TileHolders/TileHolder";
+
+const SearchResults = ({ results, tile }) => {
     // return early if there are no images
+   
     if (results === null) {
-        {console.log("hi")}
+        
         return <h2>No Images Found!</h2>
       }
     
@@ -10,9 +13,9 @@ const SearchResults = ({ results }) => {
       <div className="gallery">
           
         {results.map(image => (
-            <div key={image.id} className="gif">
-                {console.log(JSON.stringify(image,null,4))}
-                <img src={image.image_url} alt={image.name} />
+            <div onClick={() => tile(image)} key={image.id} className="gif">
+                
+                <input type='image' className='results' src={image.image_url} alt={image.name} />
                
             </div>
         ))}

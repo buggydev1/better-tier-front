@@ -11,11 +11,11 @@ return(
                     tile slots
                 </div>
                 <div className='setting'>
-                    <buttons>Settings</buttons>
+                    <button>Settings</button>
                 </div>
                 <div className='move-buttons'>
-                    <buttons>up</buttons>
-                    <buttons>down</buttons>
+                    <button>up</button>
+                    <button>down</button>
                 </div>
             </div>
         </div>

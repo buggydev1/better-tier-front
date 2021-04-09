@@ -35,12 +35,13 @@ border-style: solid;
 }
 
 .tile-holder{
-    display: grid ;
-    background-color: black;
-    height: 25vh;
-    justify-content: flex-start;
-    overflow: auto;
     
+    background-color: black;
+    height: auto;
+    min-height: 25vh ;
+    justify-content: flex-start;
+    
+  
 }
 
 .tile{
@@ -49,3 +50,45 @@ border-style: solid;
     width: 10vh;
    
 }
+
+.gallery {
+    column-count: 4;
+    overflow:auto;
+    height: 50vh;
+  }
+.results {
+    height:10vh;
+    width: 10vh;
+}
+.tier-layout{
+    
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 1fr;
+    gap: 0px 6px;
+    grid-template-areas:". .";
+    
+}
+.tile-render {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted green;
+  }
+  
+  .tile-render span {
+    visibility: hidden;
+    width: 50vh;
+    background-color: green;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+  
+  
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .tile-render:hover span {
+    visibility: visible;
+  }

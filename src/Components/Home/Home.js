@@ -1,7 +1,8 @@
 import SearchResults from "../SearchResults/SearchResults"
 import SearchAnime from "../SearchAnime/SearchAnime";
-import React, { useState, useEffect } from 'react';
+import React, { useState,  } from 'react';
 import SearchHeader from "../SearchResults/SearchHeader"
+import '../../styles/style.css'
 function Home() {
   const [images, setImages] = useState(null)
   const searchOptions = {
@@ -17,9 +18,8 @@ function Home() {
 
   const [searchString, setSearchString] = useState('');
   const [lastSearch, setLastSearch] =useState('')
-  // useEffect(() => {
-  //   getImages(searchString);
-  // }, []);
+   
+  
   function getImages(searchString) {
    
     /* Build a URL from the searchOptions object */
@@ -28,10 +28,10 @@ function Home() {
     fetch(url)
       .then(response => response.json())
       .then(response => {
-        
         setImages(response.results);
         setLastSearch(searchString);
         setSearchString('')
+       
       })
       .catch(console.error);
   }
