@@ -4,6 +4,8 @@ import SearchResults from "../SearchResults/SearchResults"
 import SearchAnime from "../SearchAnime/SearchAnime";
 import React, { useState } from 'react';
 import SearchHeader from "../SearchResults/SearchHeader"
+import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
+
 
 function Other(props) {
   const [images, setImages] = useState(null)
@@ -12,10 +14,10 @@ function Other(props) {
     endpoint: '/search',
     type: '/character'
   };
-
   const [ tileData, getTileData] = useState([]); 
   const [searchString, setSearchString] = useState('');
   const [lastSearch, setLastSearch] =useState('')
+  const [tileRank, updateTileRank] = useState(tileData);
 
 function tileMaker (tile) {
   getTileData([...tileData, tile])
@@ -51,6 +53,8 @@ function tileMaker (tile) {
     getImages(searchString);
   }
 
+
+
   return (
     <div className="App">
       <h1>{props.page}</h1>
@@ -66,10 +70,19 @@ function tileMaker (tile) {
           <SearchResults results={images} tile={tileMaker}/>
         </div>
         <div className="tier-maker">
-          <Layout></Layout>
-          <Layout></Layout>
-          <Layout></Layout>
-          <TileHolder tile={tileData}></TileHolder>
+          <DragDropContext>
+           
+                
+            <Layout></Layout>
+            <Layout></Layout>
+            <Layout></Layout> 
+            
+              
+              <TileHolder tile={tileData} >
+              
+              </TileHolder>
+            
+          </DragDropContext>
         </div>
       </div>
     </div>

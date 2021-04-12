@@ -1,3 +1,5 @@
+
+import {Draggable, Droppable } from 'react-beautiful-dnd';
 export default function TileHolder ({tile}){
     const getname = (image) => {
        if (image.anime[0] === undefined) {
@@ -8,19 +10,25 @@ export default function TileHolder ({tile}){
     }
     
     return (
-        
-        <div className='tile-holder'>
-            {tile.map((image)=>{
-                return  <div className="tile-render" >
-                            <span>Name: {image.name} 
-                            <br/>Anime: {getname(image)} 
-                            </span>
-                            <img className='tile' src={image.image_url} alt={image.name} />
-                        </div>
+        <Droppable droppableId="tier-holder">
+              {(provided) =>(
+        <div className='tile-holder' {...provided.droppableProps} ref={provided.innerRef}>
+             ...
+            {provided.placeholder}
+            {tile.map((image, index)=>{
+                return  <Draggable key={image.name} draggableId={image.name} index={index}>
+                            {(provided) => (
+                            <div className="tile-render" ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps} >
+                                <span>Name: {image.name} 
+                                <br/>Anime: {getname(image)} 
+                                </span>
+                                <img className='tile' src={image.image_url} alt={image.name} />
+                            </div>)}
+                        </Draggable>
             })}
            
-        </div>
-            
+        </div> )}
+            </Droppable>
  
     )
 }
