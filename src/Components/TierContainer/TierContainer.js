@@ -1,4 +1,6 @@
-export default function Layout () {
+import {Droppable } from 'react-beautiful-dnd';
+
+export default function Layout ( {id} ) {
 return(
     <div>
         
@@ -7,15 +9,20 @@ return(
                 <div className='labal'>
                     <span>lable</span>
                 </div>
-                <div className='tier-sort'>
-                    tile slots
-                </div>
+                <Droppable droppableId={id}>
+                    {(provided) => (
+                    <div className='tier-sort'{...provided.droppableProps} ref={provided.innerRef}>
+                          ...
+                        {provided.placeholder}
+                    </div>
+                    )}
+                </Droppable>
                 <div className='setting'>
-                    <button>Settings</button>
+                    <span>Put Settings here</span>
                 </div>
                 <div className='move-buttons'>
-                    <button>up</button>
-                    <button>down</button>
+                    <span>adjust TBA</span>
+                    
                 </div>
             </div>
         </div>

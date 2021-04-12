@@ -4,7 +4,7 @@ import SearchResults from "../SearchResults/SearchResults"
 import SearchAnime from "../SearchAnime/SearchAnime";
 import React, { useState } from 'react';
 import SearchHeader from "../SearchResults/SearchHeader"
-import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
+import { DragDropContext} from 'react-beautiful-dnd';
 
 
 function Other(props) {
@@ -17,7 +17,7 @@ function Other(props) {
   const [ tileData, getTileData] = useState([]); 
   const [searchString, setSearchString] = useState('');
   const [lastSearch, setLastSearch] =useState('')
-  const [tileRank, updateTileRank] = useState(tileData);
+ 
 
 function tileMaker (tile) {
   getTileData([...tileData, tile])
@@ -55,6 +55,18 @@ function tileMaker (tile) {
 
 
 
+  
+  function handleOnDragEnd(result) {
+    if (!result.destination) return;
+    const items = Array.from(tileData);
+    const [reorderedItem] = items.splice(result.source.index, 1);
+    items.splice(result.destination.index, 0, reorderedItem);
+
+    getTileData(items);
+    console.log(result)
+  }
+
+
   return (
     <div className="App">
       <h1>{props.page}</h1>
@@ -70,15 +82,15 @@ function tileMaker (tile) {
           <SearchResults results={images} tile={tileMaker}/>
         </div>
         <div className="tier-maker">
-          <DragDropContext>
+        <DragDropContext onDragEnd={handleOnDragEnd}>
            
                 
-            <Layout></Layout>
-            <Layout></Layout>
-            <Layout></Layout> 
+            <Layout id="tier1"></Layout>
+            <Layout id={"tier2"}></Layout>
+            <Layout id={"tier3"}></Layout> 
             
               
-              <TileHolder tile={tileData} >
+              <TileHolder tile={tileData} dropId={"holder"} >
               
               </TileHolder>
             

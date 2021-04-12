@@ -10,7 +10,7 @@ const SearchResults = ({ results, tile }) => {
       <div className="gallery">
           
         {results.map(image => (
-            <div onClick={() => tile(image)} key={image.id} className="gif">
+            <div onClick={() => tile(image)} key={image.mal_id} className="gif">
                 
                 <input type='image' className='results' src={image.image_url} alt={image.name} />
                
