@@ -21,7 +21,7 @@ border-style: solid;
 }
 
 .tier-sort{
-    background-color: red;
+    background-color:rgb(00, 00, 00);
     grid-area: 1 / 2 / 2 / 3;
 }
 

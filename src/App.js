@@ -3,6 +3,8 @@ import { HashRouter as Router, Route, Switch, Link } from 'react-router-dom'
 import Other from './Components/Other/Other'
 import Home from './Components/Home/Home'
 import './styles/style.css'
+import UserTierCreate from './Components/UserTierCreate/UserTierCreate'
+import NavBar from './Components/NavBar/NavBar.js';
 
 
 // Save the Component, key and path in an array of objects for each Route
@@ -26,25 +28,24 @@ const routes = [
     Component: Home,
     key: 'Home',
     path: '/'
-  }
+  },
+{   
+   Component: UserTierCreate,
+    key: 'UserTierCreate',
+    path: '/createpage'
+},
 ]
 
 export default function App () {
 
   return (
     <Router>
-      <nav>
-        {routes.map(route => <Link key={route.key} to={route.path}>{route.key}</Link>)}
-      </nav>
+      
+      <NavBar></NavBar>
       <Switch>
-        {
-          routes.map(({key, Component, path}) => (
-            <Route
-              key={key}
-              path={path}
-              component={props => <Component {...props} page={key} />}
-              />))
-        }
+        <Route exact path="/" render={()=> <Home />}/>
+        <Route exact path="/Other" render={() => <Other/>} />
+        <Route exact path="/CreatePage" render={() => <UserTierCreate/>} />
       </Switch>
     </Router>
   )
