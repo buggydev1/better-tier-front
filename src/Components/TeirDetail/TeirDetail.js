@@ -1,4 +1,4 @@
-import { DragDropContext } from "react-beautiful-dnd"
+
 import Layout from "../TierContainer/TierContainer"
 import TileHolder from "../TileHolders/TileHolder"
 
@@ -10,7 +10,7 @@ export default function TeirDetail(temp) {
         return <h1>Theses are not the teirs you are looking for!</h1>
     }
     return(
-        <DragDropContext onDragEnd={this.onDragEnd}>
+        
         <div>
             <h1>{temp.temp.title}</h1>
             
@@ -25,6 +25,6 @@ export default function TeirDetail(temp) {
                 <TileHolder tiles={temp.temp.tiles}></TileHolder>
             
         </div>
-        </DragDropContext>
+        
     )
 }
