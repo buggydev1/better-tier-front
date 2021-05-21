@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# Better TierMaker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Description
+A way to quickly import images and anime information to make a Tier list.
 
-In the project directory, you can run:
 
-### `yarn start`
+## Project Link
+TBA
+## Getting Start
+* Select "Addnew" from Nav Bar
+* Use the Search bar to search for a anime character.
+* Click on the image of the character you want.
+* Change the tier colors and names to what you want
+* Choose a title
+* Hit Submit to upload your template,
+* Found your template and enjoy     
+## Contributors
+* **Tyree Harper** 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Technologies Used
+* [Node.js](https://nodejs.org/en/) - Runtime environment
+* HTML5
+* CSS
+* [Google Chrome] https://www.google.com/chrome/ 
+* [React] (https://reactjs.org/) Front-End Framework
+* Express Back-end
+* MongoDB
+* Mongress
+* 
+* Additional Tools: 
+  * [Github](https://github.com/) - Version control
+  * [React Beautiful DnD](https://react-dnd.github.io/react-dnd/docs/overview) -Drag and Drop libary
+    
+## API Use
+* [Jikan open-source API](https://jikan.moe/)
+* [Personal made Restful Api ](https://github.com/buggydev1/better-tier)
+## Our Process
+* Watching my friend spend soo much time making a single tier list and having the users not know who were the character. 
+* 
+#### Site Features
+*  Look for anime character and place them on the tile holder automaticly
+*  
+#### Wireframing:
+![Tier Maker WireFrame](https://i.imgur.com/EFi9upo.png)
+![Template WireFrame] ([https://i.imgur.com/YfYuWke.png)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Challenges/Future Goals
+* Finsh drag and drop function
+* Add other media api 
+* Add Users
+* full edit tools
+* Add person image uplord and custom tiles
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Special Thanks
+* The General Assembly SEIR-Erica instructional team
