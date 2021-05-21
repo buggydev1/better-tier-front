@@ -43,7 +43,7 @@ TBA
 *  
 #### Wireframing:
 ![Tier Maker WireFrame](https://i.imgur.com/EFi9upo.png)
-![Template WireFrame] ([https://i.imgur.com/YfYuWke.png)
+![Template WireFrame](https://i.imgur.com/YfYuWke.png)
 
 ## Challenges/Future Goals
 * Finsh drag and drop function
