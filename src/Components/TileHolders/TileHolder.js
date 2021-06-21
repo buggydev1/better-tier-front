@@ -1,4 +1,4 @@
-
+import { Draggable, Droppable } from "react-beautiful-dnd"
 
 export default function TileHolder ({tiles,}){
 
@@ -10,16 +10,19 @@ export default function TileHolder ({tiles,}){
             
             {tiles.map((image, index)=>{
                 {console.log(image)}
-                return  <div key={image._id}  index={index}>
-                            
-                            <div className="tile-render" >
-                                <span>Name: {image.name} 
-                                <br/>Source: {image.source} 
-                                </span>
-                                <img className='tile' src={image.image_url} alt={image.name} />
-                            </div>
-                     </div>
-            })}
+                return (
+                    <Draggable key={image._id}  index={index} draggableId={image._id}>
+                        {(provided) =>(
+                                <div className="tile-render" ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>
+                                    <span>
+                                        Name: {image.name} 
+                                        <br/>Source: {image.source} 
+                                    </span>
+                                    <img className='tile' src={image.image_url} alt={image.name} />
+                                </div>)
+                                }
+                        </Draggable>
+            )})}
            
         </div> )
             

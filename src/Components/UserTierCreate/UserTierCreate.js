@@ -1,10 +1,9 @@
 import {useState} from 'react'
-
+import '../../styles/style.css'
 import SearchAnime from '../SearchAnime/SearchAnime'
 import SearchHeader from '../SearchResults/SearchHeader'
 import SearchResults from '../SearchResults/SearchResults'
-import  TileHolder from '../TileHolders/TileHolder'
-
+import  TileHolderForm from '../TileHolders/TileHolerForm'
 const UserTierCreate = () => {
     const [newTier, setNewTier] = useState(null)
     const [tierNumber, setTierNumber ] = useState(5)
@@ -15,7 +14,7 @@ const UserTierCreate = () => {
     
     const tierInfoFoam = async () => {
        
-        setNewTier(
+       await setNewTier(
                  {
             title: title,
             number_of_tiers: tierNumber,
@@ -161,10 +160,10 @@ const UserTierCreate = () => {
                 <div> 
                     
                    </div>
-                <div className="Holder">
-                <TileHolder tile={tileData} >
+                <div className="galleryt">
+                <TileHolderForm tile={tileData} >
                     
-              </TileHolder>
+              </TileHolderForm>
 
                 </div>
                 <input type="submit"></input>

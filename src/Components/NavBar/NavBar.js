@@ -7,7 +7,7 @@ export default function NavBar (){
             <nav>
 
                 <Link to="/" exact >Home</Link>
-                <Link to="/Other"> Temp</Link>
+                
                 <Link to="/CreatePage">Add New</Link>
             </nav>
         </header>
